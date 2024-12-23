@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaptive Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img class= "img" src="pics/logo1.webp" > 
+    </div>
+    <nav class="navbar">
+      <ul class="nav-con">
+        <li><a href="#">Home </a></li>
+        <li><a href="#">Characters</a></li>
+        <li><a href="#">Plot </a></li>
+        <li><a href="#">Mangaka</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+      <div class="card">
+        <div class="video">
+          <video class="video-1" autoplay  loop muted src="vids/gojo.mp4"></video>
+        </div>
+        <div class="text">
+            <h2>GOJO</h2>
+            <p>Satoru Gojo (五ご条じょう悟さとる Gojō Satoru?) is one of the main protagonists of the Jujutsu Kaisen series.<span id="dots">...</span><span id="more">He is a special grade jujutsu sorcerer and widely recognized as the strongest in the world. Satoru is the pride of the Gojo Clan, the first person to inherit both the Limitless and the Six Eyes in four hundred years. He works as a teacher at the Tokyo Jujutsu High and uses his influence to protect and train strong young allies.</span></p>
+            <button onclick="myFunction()" id="myBtn">Read more</button>
+            
+            <script>
+            function myFunction() {
+              var dots = document.getElementById("dots");
+              var moreText = document.getElementById("more");
+              var btnText = document.getElementById("myBtn");
+            
+              if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more"; 
+                moreText.style.display = "none";
+              } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less"; 
+                moreText.style.display = "inline";
+              }
+            }
+            </script>  
+
+        </div>
+      </div>
+      <div class="card">
+        <div class="video">
+          <video class="video-2" autoplay loop muted src="vids/sukuna.mp4"> </video>
+        </div>
+        <div class="text">
+            <h2>SUKUNA</h2>
+            <p>Ryomen Sukuna (両りょう面めん宿すく儺な Ryōmen Sukuna?) is the strongest jujutsu sorcerer from over a thousand years ago.<span id="dots2">...</span><span id="more2">Regarded as the undisputed King of Curses. Sukuna is one of the primary antagonists of the Jujutsu Kaisen series. According to legend, Sukuna was an Imaginary Demon during the Heian Era.</span></p>
+            <button onclick="myFunction2()" id="myBtn2">Read more</button>
+            
+            <script>
+            function myFunction2() {
+              var dots = document.getElementById("dots2");
+              var moreText = document.getElementById("more2");
+              var btnText = document.getElementById("myBtn2");
+            
+              if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more"; 
+                moreText.style.display = "none";
+              } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less"; 
+                moreText.style.display = "inline";
+              }
+            }
+            </script>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      
+      <div class="slider">
+        <div class="slides">
+            <div class="slide"> <p>Слайд 1</p> </div>
+            <div class="slide"> <p>Слайд 2</p> </div>
+            <div class="slide"> <p>Слайд 3</p> </div>
+        </div> 
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+        <script>
+          let slideIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    slideIndex = (index + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+
+function changeSlide(direction) {
+    showSlide(slideIndex + direction);
+}
+
+// Инициализация отображения
+showSlide(slideIndex);
+        </script>
+    </footer>
+  </main>
+</body>
+</html>

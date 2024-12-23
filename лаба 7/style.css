@@ -1,0 +1,168 @@
+#more {display: none;}
+
+.img {
+    width: 100%;
+    height: 308px;
+    position: static;
+    filter: grayscale(0.9) contrast(1.5) ;
+}
+
+.video-1  {
+    margin: 10px;
+    position: static;
+    width: 540px;
+    height: 300px;
+    border-radius: 5%;
+    box-shadow: 4px 8px rgb(0, 0, 0), -1em 0 .4em rgb(145, 3, 197);
+  
+}
+.video-2  {
+    margin: 10px;
+    position: static;
+    width: 540px;
+    height: 300px;
+    border-radius: 5%;
+    box-shadow: 4px 8px rgb(0, 0, 0), -1em 0 .4em rgba(228, 0, 0, 0.803);
+}
+.card p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: lightsteelblue;
+}
+.card {
+    display: flex;
+    flex-direction: row;
+}
+body {
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    background: linear-gradient(0deg, #000000 2%, #727683 95%);
+    
+}
+
+.navbar {
+    background-color: #727683;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar li {
+    flex: 1;
+}
+
+.navbar a {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: linear-gradient(0deg, #727683 0%, #000000 101%);
+    text-align: center;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.793);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .card {
+      flex-direction: column; /* Ставим карточки друг под другом */
+      align-items: center; /* Центрируем содержимое */
+    }
+  
+    .video-1, .video-2 {
+      width: 100%; /* Видео занимает всю ширину */
+      height: auto; /* Высота подстраивается автоматически */
+    }
+  
+    .navbar ul {
+      flex-direction: column; /* Меню становится вертикальным */
+    }
+  
+    .navbar a {
+      padding: 10px; /* Уменьшаем отступы */
+    }
+  
+    .img {
+      height: auto; /* Логотип подстраивается под ширину */
+    }
+  }
+  
+  /* Адаптация для мобильных устройств (ширина экрана до 480px) */
+  @media (max-width: 480px) {
+    .card p {
+      font-size: 18px; /* Уменьшаем размер текста */
+    }
+  
+    .navbar a {
+      font-size: 14px; /* Уменьшаем шрифт в меню */
+    }
+  
+    .slider .slide {
+      padding: 10px; /* Уменьшаем отступы внутри слайдов */
+    }
+  
+    .prev, .next {
+      padding: 5px; /* Уменьшаем кнопки переключения слайдов */
+    }
+  
+    .video-1, .video-2 {
+      width: 100%; /* Видео занимает всю ширину */
+      height: auto; /* Высота подстраивается автоматически */
+    }
+  
+    .img {
+      width: 100%; /* Логотип занимает всю ширину */
+      height: auto; /* Высота подстраивается автоматически */
+    }
+  }
